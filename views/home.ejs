@@ -1,0 +1,11 @@
+<%- include('./partials/header'); -%>
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<% post.forEach((posts) => { %> 
+   <h1> <%= posts.title %> </h1>
+   <p> <%= posts.content.substring(0,100) + " ..." %>  <a href="/post/<%= posts._id %>">Read more</a> </p> <!-- substring(starting index,length) is used here to truncate the content to only 100 charcters -->
+    <%});%> 
+
+<%- include('./partials/footer'); -%>
